@@ -1,0 +1,48 @@
+.solar-calender-container {
+	background-color: rgba(0,0,0,0.8);
+    color: lightgreen;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.solar-date-container {
+	font-size: 42px;
+    color: greenyellow;
+    padding: 5px;
+}
+
+.solar-month-container {
+	font-size: 16px;
+    text-align: left;
+}
+
+.solar-dateappend-container {
+    padding: 10px;
+    text-align: left;
+}
+
+.solar-time-container {
+	font-size: 18px;
+    color: lightsalmon;
+    text-align: center;
+}
+
+
+.solar-panchang-container {
+	font-size: 18px;
+	color: lightpink;
+    background: #fffc77;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.solar-tithi-container, .solar-nakshtra-container {
+    text-align: right;
+    color: aqua;
+    font-size: 18px;
+}
+
+
+
+

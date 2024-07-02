@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="month.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5738153"
+     inkscape:cx="389.49815"
+     inkscape:cy="311.07571"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1326"
+     inkscape:window-height="743"
+     inkscape:window-x="40"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-138.24998)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="30.565187"
+       y="193.955"
+       id="text4832"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="191.42186"
+       y="-200.63875"
+       id="text4836"
+       transform="rotate(103.1895)"><tspan
+         sodipodi:role="line"
+         id="tspan4834"
+         x="191.42186"
+         y="-200.63875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="36.955585"
+       y="158.40848"
+       id="text4840"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="32.562199"
+       y="178.37843"
+       id="text4848"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-137.63644"
+       y="166.29639"
+       id="text4910"
+       transform="scale(-1,1)" />
+    <g
+       id="g90"
+       transform="matrix(0.61102595,0,0,0.61102595,31.499895,85.275551)">
+      <g
+         id="g4828"
+         transform="matrix(-1,0,0,1,158.75,0)">
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4814"
+           d="m 533.55664,165.20508 c 10.61713,-6.07935 17.21701,-9.8299 26.11524,-14.91211 A 300,300 0 0 0 449.97266,40.607422 c -5.13395,8.797348 -8.94773,15.301337 -15.0586,25.798828 a 270,270 0 0 1 98.64258,98.79883 z"
+           style="fill:#0000d4;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4812"
+           d="m 569.99805,300.04492 c 12.18017,0.0436 19.79127,0.0949 29.99609,0.14258 A 300,300 0 0 0 600,300 300,300 0 0 0 559.67188,150.29297 c -8.89823,5.08221 -15.49811,8.83276 -26.11524,14.91211 A 270,270 0 0 1 570,300 a 270,270 0 0 1 -0.002,0.0449 z"
+           style="fill:#3771c8;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4810"
+           d="m 533.59375,434.91406 c 10.49749,6.11087 17.00148,9.92465 25.79883,15.0586 A 300,300 0 0 0 599.99414,300.1875 c -10.20482,-0.0477 -17.81592,-0.0989 -29.99609,-0.14258 a 270,270 0 0 1 -36.4043,134.86914 z"
+           style="fill:#00ccff;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4808"
+           d="m 434.79492,533.55664 c 6.07935,10.61713 9.8299,17.21701 14.91211,26.11524 A 300,300 0 0 0 559.39258,449.97266 c -8.79735,-5.13395 -15.30134,-8.94773 -25.79883,-15.0586 a 270,270 0 0 1 -98.79883,98.64258 z"
+           style="fill:#00ff66;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4806"
+           d="m 299.95508,569.99805 c -0.0436,12.18017 -0.0949,19.79127 -0.14258,29.99609 A 300,300 0 0 0 300,600 300,300 0 0 0 449.70703,559.67188 c -5.08221,-8.89823 -8.83276,-15.49811 -14.91211,-26.11524 A 270,270 0 0 1 300,570 a 270,270 0 0 1 -0.0449,-0.002 z"
+           style="fill:#66ff00;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4804"
+           d="m 165.08594,533.59375 c -6.11087,10.49749 -9.92465,17.00148 -15.0586,25.79883 a 300,300 0 0 0 149.78516,40.60156 c 0.0477,-10.20482 0.0989,-17.81592 0.14258,-29.99609 a 270,270 0 0 1 -134.86914,-36.4043 z"
+           style="fill:#ffcc00;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4802"
+           d="m 66.443359,434.79492 c -10.617129,6.07935 -17.217009,9.8299 -26.115234,14.91211 A 300,300 0 0 0 150.02734,559.39258 c 5.13395,-8.79735 8.94773,-15.30134 15.0586,-25.79883 A 270,270 0 0 1 66.443359,434.79492 Z"
+           style="fill:#ff6600;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4800"
+           d="M 30.001953,299.95508 C 17.821784,299.91144 10.210677,299.86019 0.00585938,299.8125 A 300,300 0 0 0 0,300 300,300 0 0 0 40.328125,449.70703 c 8.898225,-5.08221 15.498105,-8.83276 26.115234,-14.91211 A 270,270 0 0 1 30,300 a 270,270 0 0 1 0.002,-0.0449 z"
+           style="fill:#ff2a2a;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4798"
+           d="M 66.40625,165.08594 C 55.908759,158.97507 49.40477,155.16129 40.607422,150.02734 A 300,300 0 0 0 0.00585938,299.8125 C 10.210677,299.8602 17.821784,299.9114 30.001953,299.95508 A 270,270 0 0 1 66.40625,165.08594 Z"
+           style="fill:#ff0066;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4796"
+           d="M 165.20508,66.443359 C 159.12573,55.82623 155.37518,49.22635 150.29297,40.328125 A 300,300 0 0 0 40.607422,150.02734 c 8.797348,5.13395 15.301337,8.94773 25.798828,15.0586 a 270,270 0 0 1 98.79883,-98.642581 z"
+           style="fill:#ff00cc;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path4794"
+           d="M 300.1875,0.00585938 A 300,300 0 0 0 300,0 300,300 0 0 0 150.29297,40.328125 c 5.08221,8.898225 8.83276,15.498105 14.91211,26.115234 A 270,270 0 0 1 300,30 a 270,270 0 0 1 0.0449,0.002 c 0.0436,-12.180169 0.0949,-19.791276 0.14258,-29.99609362 z"
+           style="fill:#cc00ff;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+        <path
+           transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+           id="path10"
+           d="M 300.1875,0.00585938 C 300.13981,10.210677 300.08856,17.821784 300.04492,30.001953 A 270,270 0 0 1 434.91406,66.40625 c 6.11087,-10.497491 9.92465,-17.00148 15.0586,-25.798828 A 300,300 0 0 0 300.1875,0.00585938 Z"
+           style="fill:#7f2aff;stroke-width:2.55045"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="84.552948"
+         y="-287.60596"
+         id="text4844"
+         transform="rotate(136.90657)"><tspan
+           sodipodi:role="line"
+           id="tspan4842"
+           x="84.552948"
+           y="-287.60596"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583">वैशाख</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-10.387316"
+         y="-305.53662"
+         id="text4844-9"
+         transform="rotate(162.12307)"><tspan
+           sodipodi:role="line"
+           id="tspan4842-1"
+           x="-10.387316"
+           y="-305.53662"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583">ज्येष्ठ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-115.99383"
+         y="128.19095"
+         id="text4844-96"
+         transform="rotate(-49.259408)"><tspan
+           id="tspan4842-9"
+           x="-115.99383"
+           y="128.19095"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           sodipodi:role="line">कार्तिक</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-150.0094"
+         y="-255.37057"
+         id="text4844-3"
+         transform="rotate(-161.82948)"><tspan
+           sodipodi:role="line"
+           id="tspan4842-3"
+           x="-150.0094"
+           y="-255.37057"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583">आषाढ़</tspan></text>
+      <text
+         id="text4886"
+         y="-177.31538"
+         x="-207.76968"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(-136.82932)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="-177.31538"
+           x="-207.76968"
+           id="tspan4884"
+           sodipodi:role="line">श्रावण</tspan></text>
+      <text
+         id="text4890"
+         y="-62.234905"
+         x="-234.17209"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(-107.08805)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="-62.234905"
+           x="-234.17209"
+           id="tspan4888"
+           sodipodi:role="line">भाद्रपक्ष</tspan></text>
+      <text
+         id="text4894"
+         y="51.787144"
+         x="-196.59836"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(-77.113188)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="51.787144"
+           x="-196.59836"
+           id="tspan4892"
+           sodipodi:role="line">आश्विन</tspan></text>
+      <text
+         id="text4898"
+         y="155.99565"
+         x="17.324261"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(-13.126972)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="155.99565"
+           x="17.324261"
+           id="tspan4896"
+           sodipodi:role="line">मार्गशीष</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="136.49648"
+         y="111.38728"
+         id="text4902"
+         transform="rotate(16.754406)"><tspan
+           sodipodi:role="line"
+           id="tspan4900"
+           x="136.49648"
+           y="111.38728"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583">पौष</tspan></text>
+      <text
+         id="text4906"
+         y="12.435966"
+         x="208.28757"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(47.941767)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="12.435966"
+           x="208.28757"
+           id="tspan4904"
+           sodipodi:role="line">माघ</tspan></text>
+      <text
+         id="text4914"
+         y="-102.67461"
+         x="225.92058"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"
+         transform="rotate(76.953952)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Kruti Dev 010';-inkscape-font-specification:'Kruti Dev 010, ';stroke-width:0.264583"
+           y="-102.67461"
+           x="225.92058"
+           id="tspan4912"
+           sodipodi:role="line">फाल्गुन</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.25967px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.156492"
+         x="177.35912"
+         y="-215.30858"
+         id="text54"
+         transform="rotate(107.6686)"><tspan
+           sodipodi:role="line"
+           id="tspan52"
+           x="177.35912"
+           y="-215.30858"
+           style="stroke-width:0.156492">चैत्र</tspan></text>
+    </g>
+    <path
+       style="fill:#7137c8;stroke-width:0.576222"
+       d=""
+       id="path1014"
+       transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="22.969662"
+       y="165.4937"
+       id="text22874"><tspan
+         sodipodi:role="line"
+         id="tspan22872"
+         style="stroke-width:0.264583"
+         x="22.969662"
+         y="165.4937" /></text>
+  </g>
+</svg>
