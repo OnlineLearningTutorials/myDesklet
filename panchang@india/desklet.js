@@ -1,34 +1,14 @@
-// Time And Date Cinnamon Desklet v0.1 - 19 June 2013
-//
-// This is a simple desklet to display the time and date. The size and format of the date are configurable by changing the values in metadata.json. 
-// This can be launched from the Desklet itself by selecting Config from the menu.
-// 
-// I'm sharing it in case it useful to anyone else especially as there do not seem to be many Cinammon Desklets yet. 
-//
-// -Steve
-// desklets [at] stargw [dot] eu
-
 const Gio = imports.gi.Gio;
 const St = imports.gi.St;
-
 const Desklet = imports.ui.desklet;
-
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const GLib = imports.gi.GLib;
 const PopupMenu = imports.ui.popupMenu;
 const Util = imports.misc.util;
-
-const Gettext = imports.gettext;
 const UUID = "panchang@india";
 
-// l10n/translation support
-
-Gettext.bindtextdomain(UUID, GLib.get_home_dir() + "/.local/share/locale")
-
-function _(str) {
-    return Gettext.dgettext(UUID, str);
-}
+var n_karan, n_kar, karanaend, karanaendhms, displayDate, tzone, julianDays, vaaram, ayanamsa, sunDegrees, moonDeg, nakshatra, tithi, nakshatraend, nakshatraendhms, tithiend, tithiendhms, n_yoga, yogaend, jdt, z, iyog, Lsun0, Lmoon0, dmoonYoga, dsunYoga, asp1, z1, z2, f, alf, a, b, d, c, e, days, kday, kmon, kyear, hh1, khr, kmin, ksek, s;
 
 function MyDesklet(metadata) {
     this._init(metadata);
@@ -40,125 +20,53 @@ MyDesklet.prototype = {
     _init: function(metadata) {
         Desklet.Desklet.prototype._init.call(this, metadata);
 
-        this.metadata = metadata
-        this.dateFormat = this.metadata["dateFormat"];
-        this.dateSize = this.metadata["dateSize"];
-        this.timeFormat = this.metadata["timeFormat"];
-        this.timeSize = this.metadata["timeSize"];
+        this._mainContainer = new St.BoxLayout({ vertical: false, style_class: 'main_container' });
 
+        this._calenderContainer = new St.BoxLayout({ vertical: true, style_class: 'calender-container' });
+        this._panchangContainer = new St.BoxLayout({ vertical: true, style_class: 'panchang-container' });
 
-        this._clockContainer = new St.BoxLayout({
-            vertical: true,
-            style_class: 'clock-container'
-        });
-
-        this._dateContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'date-container'
-        });
-        this._timeContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-        this._juliContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-        this._sunContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-        this._moonContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-        this._nakshtraContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-        this._tithiContainer = new St.BoxLayout({
-            vertical: false,
-            style_class: 'time-container'
-        });
-
+        this._dateContainer = new St.BoxLayout({ vertical: false, style_class: 'date-container' });
+        this._monthContainer = new St.BoxLayout({ vertical: false, style_class: 'month-container' });
+        this._timeContainer = new St.BoxLayout({ vertical: false, style_class: 'time-container' });
 
 
         this._date = new St.Label();
+        this._month = new St.Label();
         this._time = new St.Label();
-        this._julian = new St.Label();
-        this._sun = new St.Label();
-        this._moon = new St.Label();
+
         this._nakshtra = new St.Label();
         this._tithi = new St.Label();
-
-
+        this._vaaram = new St.Label();
+        this._karan = new St.Label();
+        this._yoga = new St.Label();
 
         this._dateContainer.add(this._date);
+        this._monthContainer.add(this._month);
         this._timeContainer.add(this._time);
-        this._juliContainer.add(this._julian);
-        this._sunContainer.add(this._sun);
-        this._moonContainer.add(this._moon);
-        this._nakshtraContainer.add(this._nakshtra);
-        this._tithiContainer.add(this._tithi);
 
+        this._calenderContainer.add(this._dateContainer, { x_fill: true });
+        this._calenderContainer.add(this._monthContainer, { x_fill: true});
+        this._calenderContainer.add(this._timeContainer, { x_fill: true});
 
-        this._clockContainer.add(this._timeContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._dateContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._juliContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._sunContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._moonContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._nakshtraContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
-        this._clockContainer.add(this._tithiContainer, {
-            x_fill: false,
-            x_align: St.Align.MIDDLE
-        });
+        this._panchangContainer.add(this._vaaram);
+        this._panchangContainer.add(this._tithi);
+        this._panchangContainer.add(this._nakshtra);
+        this._panchangContainer.add(this._karan);
+        this._panchangContainer.add(this._yoga);
 
+        this._mainContainer.add(this._calenderContainer);
+        this._mainContainer.add(this._panchangContainer);
 
+        //this._clockContainer.add(this._timeContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._dateContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._juliContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._sunContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._moonContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._nakshtraContainer, {x_fill: false, x_align: St.Align.MIDDLE});
+        //this._clockContainer.add(this._tithiContainer, {x_fill: false, x_align: St.Align.MIDDLE});
 
-        this.setContent(this._clockContainer);
-        this.setHeader(_("Time And Date"));
-
-        // Set the font sizes from .json file
-
-        this._date.style = "font-size: " + this.dateSize;
-        this._time.style = "font-size: " + this.timeSize;
-
-        // let dir_path = ;
-        // this.save_path = dir_path.replace('~', GLib.get_home_dir());
-        this.configFile = GLib.get_home_dir() + "/.local/share/cinnamon/desklets/panchang@india/metadata.json";
-        this.helpFile = GLib.get_home_dir() + "/.local/share/cinnamon/desklets/panchang@india/README";
-
-        global.log("Config file " + this.configFile);
-
-        this._menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-
-        this._menu.addAction(_("Edit Config"), Lang.bind(this, function() {
-            Util.spawnCommandLine("xdg-open " + this.configFile);
-        }));
-
-        this._menu.addAction(_("Help"), Lang.bind(this, function() {
-            Util.spawnCommandLine("xdg-open " + this.helpFile);
-        }));
-
-
+        this.setContent(this._mainContainer);
+        this.setHeader("Panchang");
         this._updateDate();
     },
 
@@ -168,29 +76,37 @@ MyDesklet.prototype = {
 
     _updateDate: function() {
 
-        // let timeFormat = '%H:%M';
-        // let dateFormat = '%A,%e %B';
+        displayDate = new Date();
+        tzone = displayDate.getTimezoneOffset() / 60 * (-1);
+        julianDays = toJulian(displayDate);
+        vaaram = wd[weekDay(julianDays)];
+        ayanamsa = calcayan(julianDays);
+        sunDegrees = sun(julianDays);
+        moonDeg = moon(julianDays);
+        nakshatra = Math.floor(fix360(moonDeg + ayanamsa) * 6 / 80);
+        tithi = Math.floor(fix360(moonDeg - sunDegrees) / 12);
+        nakshatraend = fromJulian(nakshatra_end(julianDays, nakshatra, ayanamsa));
+        nakshatraendhms = " " + parseInt((nakshatraend - displayDate) / 3600000) + ":" + parseInt(((nakshatraend - displayDate) / 60000) % 60) + ":" + parseInt(((nakshatraend - displayDate) / 1000) % 60);
+        tithiend = fromJulian(tithi_end(julianDays, tithi, 12));
+        tithiendhms = " " + parseInt((tithiend - displayDate) / 3600000) + ":" + parseInt(((tithiend - displayDate) / 60000) % 60) + ":" + parseInt(((tithiend - displayDate) / 1000) % 60);
+        n_yoga = Math.floor((sunDegrees + moonDeg + 2 * ayanamsa - 528119.989395531) * 6 / 80);
+        
+        while (n_yoga < 0) n_yoga += 27;
+        while (n_yoga > 27) n_yoga -= 27;
+        n_karan = n_karana(moonDeg, sunDegrees, julianDays);
+        //karanaendhms = " "+parseInt((karanaend-displayDate)/3600000)+":"+parseInt(((karanaend-displayDate)/60000)%60)+":"+parseInt(((karanaend-displayDate)/1000)%60);
+        
 
-        let displayDate = new Date();
-        let tzone = displayDate.getTimezoneOffset() / 60 * (-1);
-        let julianDays = toJulian(displayDate);
-        let ayanamsa = calcayan(julianDays);
-        let sunDegrees = sun(julianDays);
-        let maasa = Math.floor(sunDegrees / 30);
-        let moonDeg = moon(julianDays);
-        let nakshatra = Math.floor(fix360(moonDeg + ayanamsa) * 6 / 80);
-        let tithi = Math.floor(fix360(moonDeg - sunDegrees) / 12);
-        let nakshatraend = fromJulian(nakshatra_end(julianDays, nakshatra, ayanamsa)).toLocaleFormat(" %H:%M %B,%e तक");
-        let tithiend = fromJulian(tithi_end(julianDays, tithi, 12)).toLocaleFormat(" %H:%M %B,%e तक");
 
+        this._time.set_text(displayDate.toLocaleFormat("%H:%M:%S"));
+        this._date.set_text(displayDate.toLocaleFormat("%e"));
+        this._month.set_text(displayDate.toLocaleFormat("%B, %Y"));
 
-        this._time.set_text(displayDate.toLocaleFormat(this.timeFormat));
-        this._date.set_text(displayDate.toLocaleFormat(this.dateFormat));
-        this._julian.set_text("अयनमास-" + lon2dms(ayanamsa) + maasam[maasa]);
-        this._sun.set_text("सूर्य-" + lon2dms(sunDegrees));
-        this._moon.set_text("चन्द्र-" + lon2dms(moonDeg));
-        this._nakshtra.set_text("नक्षत्र-" + naks[nakshatra] + nakshatraend);
-        this._tithi.set_text("तिथि-" + tith[tithi] + tithiend);
+        this._vaaram.set_text("वार-" + vaaram);
+        this._nakshtra.set_text("नक्षत्र-" + naks[nakshatra] + nakshatraendhms);
+        this._tithi.set_text("तिथि-" + tith[tithi] + tithiendhms);
+        this._yoga.set_text("योग-" + yog[n_yoga]);
+        this._karan.set_text("करण-" + kar[n_karan]);
 
         this.timeout = Mainloop.timeout_add_seconds(1, Lang.bind(this, this._updateDate));
 
@@ -214,21 +130,16 @@ var dayMs = 1000 * 60 * 60 * 24,
 var date = new Date();
 var dayMs = 1000 * 60 * 60 * 24,
     J1970 = 2440588,
+    jd0, jdn, dn1, wday, nk,
     J2000 = 2451545;
 
+var wd = ["रविवार", "सोमवार", "मंगलवार", "बुधवार", "गुरुवार", "शुक्रवार", "शनिवार"];
 var maasam = [" चैत्र", " वैशाख", " ज्येष्ठ", " आषाढ़", " श्रावण", " भाद्रपक्ष", " आश्विन", " कार्तिक", " मार्गशीष", " पौष", " माघ", " फाल्गुन"];
 var naks = ["अश्विनी", "भरणी", "कृत्तिका", "रोहिणी", "मृगशिरा", "आर्द्रा", "पुनर्वसु", "पुष्य", "अश्लेषा", "मघा", "पूर्वाफाल्गुनी", "उत्तराफाल्गुनी", "हस्त", "चित्रा", "स्वाती", "विशाखा", "अनुराधा", "ज्येष्ठा", "मुल", "पुर्वाषाढा", "उत्तरषाढा", "श्रवण", "धनिष्ठा", "शतभिषा", "पूर्वभाद्रपद", "उत्तरभाद्रपद", "रेवती"];
 var tith = ["शुक्ल प्रतिपदा", "शुक्ल द्वितीया", "शुक्ल तृतीया", "शुक्ल चतुर्थी", "शुक्ल पंचमी", "शुक्ल षष्ठी", "शुक्ल सप्तमी", "शुक्ल अष्टमी", "शुक्ल नवमी", "शुक्ल दशमी", "शुक्ल एकादशी", "शुक्ल द्वादशी", "शुक्ल त्रयोदशी", "शुक्ल चतुर्दशी", "शुक्ल पूर्णिमा", "कृष्ण प्रतिपदा", "कृष्ण द्वितीया", "कृष्ण तृतीया", "कृष्ण चतुर्थी", "कृष्ण पंचमी", "कृष्ण षष्ठी", "कृष्ण सप्तमी", "कृष्ण अष्टमी", "कृष्ण नवमी", "कृष्ण दशमी", "कृष्ण एकादशी", "कृष्ण द्वादशी", "कृष्ण त्रयोदशी", "कृष्ण चतुर्दशी", "कृष्ण अमावस्या"];
+var kar = ["बव", "बालव", "कौलव", "तैतिल", "गर", "वणिज", "विष्टी", "शकुनी", "चतुष्पद", "नाग", "किंस्तुघ्न"];
+var yog = ["विष्कुंभ", "प्रिति", "आयुष्मान", "सौभाग्य", "शोभन", "अतिगण्ड", "सुकर्मा", "धृति", "शूल", "गण्ड", "बृद्धि", "ध्रुव", "व्यघात", "हर्षण", "वज्र", "सिद्धि", "व्यतिपात", "वरियान", "परिध", "शिव", "सिद्ध", "साध्य", "शुभ", "शुक्ल", "ब्रह्म", "ऐन्द्र", "वैधृति"];
 
-/*
-var zn = ["Mesha", "Vrushabha", "Mithuna", "Karkataka", "Simha", "Kanya", "Tula", "Vrushchika", "Dhanu", "Makara", "Kumbha", "Meena"];
-var wd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var range = [1, 31, 0, 0, -3000, 4000, 0, 23, 0, 59, -12, 12, 0, 59];
-var naks = ["Ashwini", "Bharani", "Kruthika", "Rohini", "Mrugasira", "Aarudra", "Punarwasu", "Pushyami", "Aslesha", "Makha", "Pubha", "Uttara", "Hasta", "Chitta", "Swati", "Visakha", "Anuradha", "Jyesta", "Mula", "Purva-Shada", "Uttara-Shaada", "Sravanam", "Dhanista", "Satabhisham", "Purva-Bhadra", "Uttara-Bhadra", "Revathi"];
-var tith = ["Padyami", "Vidhiya", "Thadiya", "Chavithi", "Panchami", "Shasti", "Sapthami", "Ashtami", "Navami", "Dasami", "Ekadasi", "Dvadasi", "Trayodasi", "Chaturdasi", "Punnami", "Padyami", "Vidhiya", "Thadiya", "Chaviti", "Panchami", "Shasti", "Sapthami", "Ashtami", "Navami", "Dasami", "Ekadasi", "Dvadasi", "Trayodasi", "Chaturdasi", "Amavasya"];
-var kar = ["Bawa", "Balava", "Kaulava", "Taitula", "Garaja", "Vanija", "Vishti", "Sakuna", "Chatushpada", "Nagava", "Kimstughana"];
-var yog = ["Vishkambha", "Prithi", "Ayushman", "Saubhagya", "Sobhana", "Atiganda", "Sukarman", "Dhrithi", "Soola", "Ganda", "Vridhi", "Dhruva", "Vyaghata", "Harshana", "Vajra", "Siddhi", "Vyatipata", "Variyan", "Parigha", "Siva", "Siddha", "Sadhya", "Subha", "Sukla", "Bramha", "Indra", "Vaidhruthi"];
-*/
 var tipnaks = [2, 5, 6, 0, 1, 4, 3, 2, 4, 5, 5, 0, 2, 1, 3, 6, 1, 4, 4, 5, 0, 3, 3, 3, 5, 0, 1];
 var Lmoon, Lsun, skor, LmoonYoga, LsunYoga, dt;
 var ayanamsa = 0;
@@ -248,6 +159,22 @@ function rightAscension(l, b) {
 function declination(l, b) {
     return Math.asin(Math.sin(b) * Math.cos(e) + Math.cos(b) * Math.sin(e) * Math.sin(l));
 }
+
+function weekDay(jd) {
+    // Julian date for the begin of the day
+    jd0 = Math.floor(jd) + 0.5;
+    if (jd < jd0) jd0 -= 1;
+
+    // day
+    jdn = jd0 + 1.5;
+    dn1 = Math.floor(jdn / 7) * 7;
+
+
+    wday = Math.floor(jdn - dn1);
+
+    return wday;
+}
+
 
 function fix360(v) {
     while (v < 0.0) v += 360.0;
@@ -713,7 +640,7 @@ function lon2dms(x) {
 }
 
 function nakshatra_end(jd, n_naksh, ayanamsa) {
-    if(panchang.nakshtra.end > jd) {
+    if (panchang.nakshtra.end > jd) {
         return panchang.nakshtra.end;
     } else {
         var flag,
@@ -747,14 +674,14 @@ function tithi_end(jd, n1, len) {
         knv = Math.floor(((jd - 2415020) / 365.25) * 12.3685);
         itit = n1 + 1;
         aspect = len * itit; // sun n moon in the early tithi
-        if (aspect == 0) {
+        /*if (aspect == 0) {
             jdt = novolun(jd, knv);
             flag = 1;
         }
         if (aspect == 360) {
             jdt = novolun(jd, (knv + 1));
             flag = 1;
-        }
+        }*/
         while (flag < 1) {
             Lsun0 = sun(jdt);
             Lmoon0 = moon(jdt);
@@ -774,3 +701,14 @@ function tithi_end(jd, n1, len) {
 
     return panchang.tithi.end;
 }
+
+function n_karana(Lmoon, Lsun, jd) {
+    nk = (Lmoon - Lsun) / 6;
+    if (nk < 0) nk += 60;
+
+    if (nk == 0) n_kar = 10;
+    if (nk >= 57) n_kar = nk - 50;
+    if (nk > 0 && nk < 57) n_kar = (nk - 1) - (Math.floor((nk - 1) / 7)) * 7;
+    return Math.floor(n_kar);
+}
+

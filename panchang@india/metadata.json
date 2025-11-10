@@ -1,11 +1,6 @@
 {
-    "last-edited": 1571513388,
-    "description": "A fork desklet that displays the tithi, nakshtra",
-    "prevent-decorations": false,
+    "description": "Displaying Hindu Panchnage",
     "uuid": "panchang@india",
     "name": "Panchang Desklet",
-    "timeFormat": "%l:%M %p",
-    "timeSize": "20pt",
-    "dateFormat": "%A,%e %B",
-    "dateSize": "15pt"
+    "version": "1.1"
 }

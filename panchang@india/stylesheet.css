@@ -1,13 +1,35 @@
-.clock-container{
-	color:#fff;
-	text-shadow: 1px 1px 2px #000;
-	padding: 4px 10px 4px 10px; 
+.main_container {
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.time-container{
+.calender-container {
+	padding: 0 10px;
+	text-align: center;
 }
 
-.date-container{
+.date-container {
+	font-size: 48px;
+	color: pink;
+	text-align: right;
 }
 
-.clock-date-label{}
+.month-container {
+	font-size: 16px;
+	color: pink;
+	text-align: right;
+}
+
+.time-container {
+	font-size: 20px;
+	color: pink;
+	text-align: right;
+}
+
+
+.panchang-container {
+	font-size: 16px;
+	color: orange;
+}
