@@ -1,0 +1,11 @@
+{
+    "last-edited": 1571513388,
+    "description": "A fork desklet that displays the tithi, nakshtra",
+    "prevent-decorations": false,
+    "uuid": "panchang1@india",
+    "name": "Panchang 1 Desklet",
+    "timeFormat": "%l:%M %p",
+    "timeSize": "20pt",
+    "dateFormat": "%A,%e %B",
+    "dateSize": "15pt"
+}
