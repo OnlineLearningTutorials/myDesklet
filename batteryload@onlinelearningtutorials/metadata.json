@@ -1,0 +1,26 @@
+{
+    "uuid": "batteryload@onlinelearningtutorials",
+    "name": "Battery Load",
+    "description": "Displays Battery Load",
+    "version": "1.1",
+    "author": "OnlineLearningTutorials",
+    "max-instances": "10",
+    "cinnamon-version": [
+        "3.4",
+        "3.6",
+        "3.8",
+        "4.0",
+        "4.2",
+        "4.4",
+        "4.6",
+        "4.8",
+        "5.0",
+        "5.2",
+        "5.4",
+        "5.6",
+        "5.8",
+        "6.0",
+        "6.2",
+        "6.4"
+    ]
+}
