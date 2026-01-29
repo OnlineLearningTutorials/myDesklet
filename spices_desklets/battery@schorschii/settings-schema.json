@@ -8,6 +8,16 @@
         "type": "header",
         "description": "Visual"
     },
+    "displaystyle": {
+    	"type": "combobox",
+    	"default": "plainbattery",
+    	"description": "Display Style",
+    	"options": {
+    		"Plain Battery": "plainbattery",
+    		"Circle": "circle",
+    		"Speedometer": "speedometer"
+    	}
+    },
     "showpercent": {
         "type" : "checkbox",
         "description": "Show battery capacity in percent",
