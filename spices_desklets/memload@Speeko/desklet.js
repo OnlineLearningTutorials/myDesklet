@@ -53,6 +53,7 @@ MemloadDesklet.prototype = {
         this.settings.bindProperty(Settings.BindingDirection.IN, "show-background", "showBackground", this.onSettingChanged);
         this.settings.bindProperty(Settings.BindingDirection.IN, "hide-decorations", "hideDecorations", this.onSettingChanged);
         this.settings.bindProperty(Settings.BindingDirection.IN, "onclick-action", "onclickAction", this.onSettingChanged);
+        this.settings.bindProperty(Settings.BindingDirection.IN, "size-prefix", "sizePrefix", this.onSettingChanged);
 
         // Persistent random color (stored in settings)
         this.settings.bindProperty(Settings.BindingDirection.BIDIRECTIONAL, "random-color-r", "randomColorR", null);
@@ -294,8 +295,8 @@ MemloadDesklet.prototype = {
 
     formatBytes: function(bytes) {
         if (bytes <= 0) return "0 B";
-        const units = ["B", "K", "M", "G", "T"];
-        const k = 1024;
+        const units = this.sizePrefix == 1000 ? ["B", "K", "M", "G", "T"] : ["Bi", "Ki", "Mi", "Gi", "Ti"];
+        const k = this.sizePrefix;
         const i = Math.min(Math.floor(Math.log(bytes) / Math.log(k)), units.length - 1);
         return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + units[i];
     },

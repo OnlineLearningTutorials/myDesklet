@@ -27,6 +27,15 @@
         "description": "Refresh interval",
         "tooltip": "How often to refresh the memory reading"
     },
+     "size-prefix": {
+        "type": "combobox",
+        "default": "1000",
+        "description": "Size Prefix",
+        "options" : {
+            "Decimal" : "1000",
+            "Binary": "1024"
+        }
+    },
     "onclick-action": {
         "type": "combobox",
         "default": "sysmonitor",
