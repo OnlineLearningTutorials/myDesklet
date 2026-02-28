@@ -1,21 +1,21 @@
 {
     "head0": {
         "type": "header",
-        "description": "Settings for Memory Load desklet"
+        "description": "Settings for Battery Charging desklet"
     },
     "head1": {
         "type": "header",
         "description": "General"
     },
-    "type": {
-        "type": "combobox",
-        "default": "ram",
-        "description": "Display type",
-        "options": {
-            "RAM": "ram",
-            "Swap": "swap"
-        },
-        "tooltip": "Choose whether to display RAM or Swap usage"
+    "low-threshold": {
+        "type": "spinbutton",
+        "default": 15,
+        "min": 5,
+        "max": 40,
+        "step": 1,
+        "units": "%",
+        "description": "Low battery threshold",
+        "tooltip": "Change color when battery is below this level"
     },
     "refresh-interval": {
         "type": "spinbutton",
@@ -24,18 +24,7 @@
         "min": 1,
         "max": 30,
         "units": "seconds",
-        "description": "Refresh interval",
-        "tooltip": "How often to refresh the memory reading"
-    },
-    "onclick-action": {
-        "type": "combobox",
-        "default": "sysmonitor",
-        "description": "Action on click",
-        "options": {
-            "Open System Monitor": "sysmonitor",
-            "Nothing": "nothing"
-        },
-        "tooltip": "What to do when the desklet is clicked"
+        "description": "Refresh interval"
     },
     "head2": {
         "type": "header",
@@ -53,23 +42,21 @@
     },
     "scale-size": {
         "type": "spinbutton",
-        "default": 1,
+        "default": 1.0,
         "min": 0.4,
-        "max": 5,
+        "max": 5.0,
         "step": 0.05,
         "units": "scale factor",
-        "description": "Desklet size",
-        "tooltip": "Increase or decrease the size of the desklet"
+        "description": "Desklet size"
     },
     "text-view": {
         "type": "combobox",
-        "default": "used-total",
+        "default": "per_only",
         "description": "Text display",
         "options": {
-            "Used / Total": "used-total",
-            "Free / Total": "free-total",
-            "Name / Used": "name-used",
-            "Name / Free": "name-free"
+            "Percentage Only": "per_only",
+            "Percentage / Status": "per_status",
+            "Percentage / Time Remaining": "per_remtime"
         }
     },
     "head3": {
@@ -89,12 +76,12 @@
     "circle-color": {
         "type": "colorchooser",
         "default": "rgba(83,199,160,1.0)",
-        "description": "Circle color",
-        "dependency": "use-custom-color"
+        "description": "Circle color"
     },
-    "head4": {
-        "type": "header",
-        "description": "Background"
+    "low-battery-color": {
+        "type": "colorchooser",
+        "default": "rgba(255,0,0,1.0)",
+        "description": "Low battery color"
     },
     "show-background": {
         "type": "checkbox",
@@ -106,40 +93,16 @@
         "description": "Hide decorations",
         "default": false
     },
-    "random-color-generated": {
-        "type": "generic",
-        "default": false
-    },
-    "random-color-r": {
-        "type": "generic",
-        "default": 1
-    },
-    "random-color-g": {
-        "type": "generic",
-        "default": 1
-    },
-    "random-color-b": {
-        "type": "generic",
-        "default": 1
-    },
-    
-    "head5": {
-        "type": "header",
-        "description": "Advanced"
-    },
     "devfile_capacity": {
         "default": "", 
         "type": "filechooser", 
-        "description" : "Path to battery capacity file (device file)",
-        "tooltip": "Choose your own capacity file e.g. for monitoring your secondary battery.\n\nDefault:\n/sys/class/power_supply/CMBx/capacity\n/sys/class/power_supply/BATx/capacity\n\nReplace x with battery number.",
+        "description" : "Path to battery capacity file",
         "allow-none" : true
     },
     "devfile_status": {
         "default": "", 
         "type": "filechooser", 
-        "description" : "Path to battery status file (device file)",
-        "tooltip": "Choose your own status file e.g. for monitoring your secondary battery.\n\nDefault:\n/sys/class/power_supply/CMBx/status\n/sys/class/power_supply/BATx/status\n\nReplace x with battery number.",
+        "description" : "Path to battery status file",
         "allow-none" : true
     }
-
 }

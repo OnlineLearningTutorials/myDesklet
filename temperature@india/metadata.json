@@ -3,5 +3,7 @@
     "name": "Temperature measure",
     "description": "Display temperature in thermometer",
     "thermal-file": "/sys/devices/virtual/thermal/thermal_zone0/temp",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "author": "OnlineLearningTutorials",
+    "last-edited": 1763057637
 }
