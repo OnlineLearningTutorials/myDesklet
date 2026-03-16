@@ -1,0 +1,9 @@
+{
+    "max-instances": "10",
+    "description": "Displays the usage of a filesystem or RAM.",
+    "name": "Disk Space",
+    "version": "1.17",
+    "uuid": "diskspace@onlinelearningtutorials",
+    "author": "schorschii, onlinelearningtutorials",
+    "last-edited": 1731072886
+}
